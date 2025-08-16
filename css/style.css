@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #100425, #DC00D3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ======================= NAVBAR ======================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    margin: 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #DC00D3;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ======================= INTRO SECTION ======================= */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    max-width: 55%;
+}
+
+.text-content h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.text-content h2 {
+    font-size: 40px;
+    margin-top: 33px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.text-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 33px;
+    text-align: justify;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 48px;
+    background-color: #DC00D3;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 99px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #e100a0;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px;
+}
+
+/* ======================= ABOUT SECTION ======================= */
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 30px;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../Image/Grid-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.about-section h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.37);
+}
+
+.about-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 44px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.icons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.icon-row img {
+    width: 50px;
+    height: auto;
+}
+
+/* ======================= SERVICES SECTION ======================= */
+.services-section {
+    text-align: center;
+    color: white;
+    margin-top: 45px;
+}
+
+.services-section h2 {
+    font-size: 64px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 60px;
+    text-shadow: 0px 4px 4px #100425;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+    border-radius: 30px;
+    padding: 57px 30px;
+    width: 428px;
+    height: 440px;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.37);
+    text-align: left;
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 22px;
+    margin-bottom: 37px;
+    line-height: 1.5;
+}
+
+.service-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* ======================= CONTACT SECTION ======================= */
+.contact-section {
+    min-height: 100vh;
+    padding: 100px 40px 80px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 64px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 60px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.37);
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h3 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+h3 span {
+    display: block;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.contact-item img {
+    width: 36px;
+    height: 36px;
+    background-color: #D9D9D9;
+    border-radius: 9px;
+    padding: 5px;
+    margin-right: 46px;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #100425;
+    padding: 41px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px rgba(220, 0, 211, 0.37);
+    width: 652px;
+    max-width: 100%;
+    height: auto;
+    min-height: 450px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 24px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+    font-size: 16px;
+    width: 100%;
+    height: 62px;
+    resize: none;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #DC00D3;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 14px 43px;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    width: 235px;
+    height: 58px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e100a0;
+}
+
+/* ======================= FOOTER ======================= */
+.footer-section {
+    width: 100%;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footer-wrapper p {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ======================= MEDIA QUERIES ======================= */
+
+/* Small Devices (Phones) – up to 767px */
+@media screen and (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        margin: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        display: none;
+        margin-top: 20px;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 30px 15px;
+        gap: 30px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .text-content h1 {
+        font-size: 30px;
+
+    }
+
+    .text-content h2 {
+
+        font-size: 26px;
+    }
+
+    .text-content p {
+
+        font-size: 14px;
+    }
+
+    .contact-button {
+        margin-top: 30px;
+        font-size: 14px;
+
+    }
+
+    .image-container img {
+        width: 80%;
+        max-width: 280px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .about-section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .about-section h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .about-text {
+
+        line-height: 1.6;
+        margin: 0 auto;
+        text-align: justify;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .about-text p {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .icon-row {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .icon-row img {
+        width: 30px;
+    }
+
+    .services-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .services-section h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        /* text-shadow: none; */
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 360px;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: black;
+        border-radius: 20px;
+        padding: 25px 20px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+        text-align: left;
+        height: auto;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .service-card ul {
+        font-size: 14px;
+        padding-left: 20px;
+        line-height: 1.5;
+    }
+
+    .contact-section {
+        padding: 40px 15px;
+
+    }
+
+
+    .contact-section h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info {
+
+        text-align: center;
+        
+    }
+
+    .contact-info h3 {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+        font-size: 14px;
+        margin-bottom: 12px;
+        
+    }
+
+    .contact-item img {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-form label {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    .social-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Tablets – 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        padding: 20px 40px;
+        margin: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .hamburger-menu {
+        display: flex;
+        margin-left: auto;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        right: 50px;
+        background: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 20px;
+        z-index: 999;
+    }
+
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 50px 30px;
+        gap: 40px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .text-content h1 {
+        font-size: 48px;
+    }
+
+    .text-content h2 {
+        font-size: 30px;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 280px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .icon-row img {
+        width: 40px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .service-card {
+        width: 50%;
+        padding: 40px 30px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 35px;
+    }
+
+    .footer-wrapper {
+        padding: 20px;
+        gap: 30px;
+        justify-content: center;
+        font-size: 24px;
+    }
+}
+
+
+/* Large Devices (Desktops) – 1025px and up */
+@media screen and (min-width: 1025px) {
+    .intro-section {
+        flex-direction: row;
+        padding: 60px 80px;
+        gap: 60px;
+    }
+
+    .text-content {
+        padding-right: 40px;
+    }
+
+    .service-cards {
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .contact-wrapper {
+        gap: 60px;
+        padding: 0 40px;
+    }
+
+    .contact-form {
+        padding: 50px;
+        height: 639px;
+    }
+
+    .footer-wrapper {
+        padding: 0 40px;
+    }
+
+    nav ul {
+        display: flex !important;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
