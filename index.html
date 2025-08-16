@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripal | Web Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Ripal</div>
+
+            <!-- Hamburger menu  -->
+            <div class="hamburger-menu" onclick="toggleMenu()" role="button" aria-label="Toggle navigation menu"
+                tabindex="0" onkeypress="if(event.key === 'Enter') toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+      <!-- Intro Section -->
+    <main>
+        <section class="intro-section">
+            <div class="text-content">
+                <h1>Hi, I’m Ripal</h1>
+                <h2>Web Developer</h2>
+                <p>
+                    Hello! I am currently pursuing Web Development at Humber College, where I am building a strong
+                    foundation in front-end technologies and responsive design. I specialize in creating modern,
+                    user-friendly web pages using HTML, CSS, and JavaScript. My approach emphasizes clean, maintainable
+                    code
+                    and efficient design practices that support both user experience and business goals.
+                </p>
+                <a href="#" class="contact-button">Contact Me</a>
+            </div>
+            <div class="image-container">
+                <img src="Image/Ripal_Image.png" alt="Ripal's Avatar" />
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section">
+            <h2>About me</h2>
+            <div class="about-text">
+                <p>Hi ! I’m a passionate and motivated Web Development student at Humber College, currently in my first
+                    year of
+                    studies. As I build a strong foundation in front-end technologies, I’m gaining hands-on experience
+                    in
+                    creating responsive, accessible, and visually engaging websites using HTML, CSS, and JavaScript.</p>
+
+                <p> Even at this early stage, I take pride in writing clean, well-structured code and designing
+                    interfaces that
+                    are both intuitive and functional. I enjoy transforming ideas into interactive web experiences that
+                    not only
+                    look good but also perform well across devices and browsers.</p>
+
+                <p> I’m particularly interested in user-centered design and how small development choices can make a big
+                    impact
+                    on usability. I approach every project as an opportunity to learn something new—whether it’s
+                    improving my
+                    layout techniques, optimizing performance, or exploring new tools and frameworks.</p>
+
+                <p>As I continue to grow as a developer, I’m excited to contribute to meaningful projects, collaborate
+                    with
+                    others, and keep pushing my skills to the next level.
+                </p>
+            </div>
+
+              <!-- Tech-icon -->
+            <div class="icons">
+                <div class="icon-row">
+                    <img src="Image/Tech-icon/html5.png" alt="HTML" />
+                    <img src="Image/Tech-icon/css3.png" alt="CSS" />
+                    <img src="Image/Tech-icon/csharp.png" alt="C#" />
+                    <img src="Image/Tech-icon/adobe.png" alt="Adobe" />
+                    <img src="Image/Tech-icon/github.png" alt="GitHub" />
+                </div>
+
+                <div class="icon-row">
+                    <img src="Image/Tech-icon/figma.png" alt="Figma" />
+                    <img src="Image/Tech-icon/vscode.png" alt="VS Code" />
+                    <img src="Image/Tech-icon/mysql.png" alt="mysql" />
+                    <img src="Image/Tech-icon/Git.png" alt="Git" />
+                    <img src="Image/Tech-icon/swagger.png" alt="Swagger" />
+                </div>
+            </div>
+        </section>
+
+        <!-- General Services Section -->
+        <section class="services-section">
+            <h2>Services</h2>
+
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>What I can do</h3>
+                    <p>
+                        I can help develop solutions that will help you grow your business:
+                    </p>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Full-stack Web Development</li>
+                        <li>Database Design</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Tools I use</h3>
+                    <p>
+                        I use the latest tools & technologies to build functional products:
+                    </p>
+                    <ul>
+                        <li>Frontend: HTML, CSS, JavaScript</li>
+                        <li>Backend: C#</li>
+                        <li>Design: Figma, Photoshop</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>UI/UX Design</h3>
+                    <p>
+                        I am a designer first, developer second. I can help design clean and modern interfaces:
+                    </p>
+                    <ul>
+                        <li>User-centered Design</li>
+                        <li>Modern & clean UI</li>
+                        <li>Responsive layouts</li>
+                        <li>Wireframes & prototypes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <div class="contact-wrapper">
+                <!-- Left side: Info -->
+                <div class="contact-info">
+                    <h3>
+                        <span>Have a Project?</span>
+                        <span>Let’s Talk!</span>
+                    </h3>
+                    <div class="contact-item">
+                        <img src="Image/Contact-icon/Phone.png" alt="Phone Icon" />
+                        <span>(647) - 123456789</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="Image/Contact-icon/Envelope.png" alt="Email Icon" />
+                        <span>n01578468@humber.ca</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="Image/Contact-icon/Address.png" alt="Location Icon" />
+                        <span>380 - Park view, Toronto, ON</span>
+                    </div>
+                </div>
+
+                <!-- Right side: Form -->
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" />
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" />
+
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-wrapper">
+            <p>2025 - Ripal Patel, All rights reserved</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <img src="Image/Footer-icon/LinkedIn.png" alt="LinkedIn" />
+                </a>
+                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+                    <img src="Image/Footer-icon/GitHub.png" alt="GitHub" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
